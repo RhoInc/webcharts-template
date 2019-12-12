@@ -1,2 +1,2 @@
-# webcharts-template
-A template for making reusable customizations to webcharts charts
+# Webcharts template
+Simple framework for initializing reusable webcharts charts. See [instructions.md](instructions.md) for step-by -step instructions. 
