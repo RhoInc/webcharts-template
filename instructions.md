@@ -5,9 +5,8 @@ A template for making reusable customizations to webcharts charts
 1. Initialize a new repo / save the template files locally
     - Follow [these instructions](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) if you're using github.
     - For local projects, do this:
-     - git clone this repo: `git clone git@github.com:RhoInc/webcharts-template.git`
-     - `mv webcharts-template my-new-folder-name` to rename the folder
-     - `cd my-new-folder-name`
+     - git clone this repo: `git clone git@github.com:RhoInc/webcharts-template.git new-repo-name`
+     - `cd new-repo-name`
      - `rm -rf .git` to remove git tracking
 2. Go to the local folder you saved the template files
 3. Call `node initChart.js` and respond to the prompts. The script will: 
