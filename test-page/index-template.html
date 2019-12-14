@@ -25,15 +25,8 @@ redirect_from:
     </body>
 
     <script type = 'text/javascript'>
-    const settings = {
-        studyday_col: 'LBDY',
-        value_col: 'LBSTRESN',
-        measure_col: 'LBTEST',
-        visit_col: 'VISIT',
-        visitn_col: 'VISITNUM',
-      }
-      const chart = myPackageFunctionGoesHere('#container', settings);
-      d3.csv('https://raw.githubusercontent.com/RhoInc/data-library/master/data/clinical-trials/sdtm/cdisc-pilot-01/lb.csv', function (data) {
+      const chart = myPackageFunctionGoesHere('#container', {});
+      d3.csv(myDataPathGoesHere, function (data) {
         chart.init(data);
       });
 </script>

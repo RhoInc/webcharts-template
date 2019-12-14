@@ -6,11 +6,12 @@ A template for making reusable customizations to webcharts charts
     - Follow [these instructions](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template) if you're using github.
     - --instructions for non-github projects here--
 2. Go to the local folder you saved the template files
-3. Call `node initChart.js` and respond to the prompts. The script will: 
-    - Create a `package.json`
-    - Update the function name in `/src/index.js`
-    - Make a really basic `README.md` (overwriting these instructions)
-    - Update the titles in `/test-page/index.html`
+3. Call `node initChart.js` and respond to the prompts. The script automatically takes the following actions: 
+    - Creates a `package.json`.
+    - Updates the function name in `/src/index.js`.
+    - Populates code in the `src` folder.
+    - Makes a really basic `README.md` (overwriting these instructions).
+    - Updates the titles in `/test-page/index.html`.
 4. Review `pacakge.json` and `readme.md` and make tweaks as needed. You can also re-run `node initCharts.js` if you want. 
 5. Test out the standard build process
     - `npm run install`
