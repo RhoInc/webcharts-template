@@ -5,7 +5,8 @@ var paths = [
     'package-template.json', 
     'test-page/index-template.html', 
     'src/index-template.js',
-    'instructions.md'
+    'instructions.md',
+    'src-templates'
 ];
 paths.forEach(function(path){
     fs.unlinkSync(path);
