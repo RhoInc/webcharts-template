@@ -44,17 +44,18 @@ const question3 = () => {
 }
 
 // Question 4 of 5 - src
-import getSrcOptions from 'src-templates/getSrcOptions';
-const srcOptions = getSrcOptions();
-let srcFolder = null;
+var srcOptions = require('./src-templates/getSrcOptions');
+let src = null;
 const question4 = () => {
     return new Promise((resolve, reject) => {
         console.log("Default graphic options:")
-        srcOptions.forEach(function(src,i){
+        srcOptions.opts.forEach(function(src,i){
             console.log(src.description)
         })
-        readline.question(`Default Graphic  - type the number for a graphic from above, or press enter for 1: `, (srcNumber) => {
-            srcFolder = srcOptions.find((f,i) => {i==srcNumber})
+        readline.question(`Default Graphic  - type the number for a graphic from above or press enter for default: `, (srcNumber) => {
+            srcNumber = srcNumber ? srcNumber : 0;
+            src = srcOptions.opts.filter(function(f,i){return i==srcNumber})[0]
+            var copydir = require('copy-dir');
             copydir('src-templates/'+src.folder, 'src', {
                 utimes: true,  // keep add time and modify time
                 mode: true,    // keep file mode
@@ -71,7 +72,7 @@ const question4 = () => {
 // Question 5 of 5 - org
 const question5 = () => {
     return new Promise((resolve, reject) => {
-        readline.question(`GitHub User or Org - Usually 'RhoInc'. Leave it blank if this isn't on GitHub: `, (org) => {
+        readline.question(`GitHub User or Org - Usually 'RhoInc'. Leave it blank (press enter) if this isn't on GitHub: `, (org) => {
             pkg.org = org
             updateProject(pkg)
             resolve()
@@ -141,7 +142,7 @@ function updateProject(pkg){
             .replaceAll("myPackageNameGoesHere", pkg.name)
             .replaceAll("myPackageFunctionGoesHere", pkg.function)
             .replaceAll("myPackageURLGoesHere", pkg.homepage)
-            .replaceAll("myDataPathGoesHere", pkg.data)
+            .replaceAll("myDataPathGoesHere", src.datapath)
 
         fs.writeFile('./test-page/index.html', new_example, (err) => {
             if (err) throw err;

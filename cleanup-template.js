@@ -7,7 +7,7 @@ var paths = [
     'test-page/index-template.html', 
     'src/index-template.js',
     'instructions.md',
-    'src-templates'
+    'src-templates/'
 ];
 paths.forEach(function(path){
     fs.unlinkSync(path);
