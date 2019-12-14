@@ -17,7 +17,7 @@ A template for making reusable customizations to webcharts charts
     - `npm run build`
     - Start a webserver (e.g. `python -m SimpleHTTPServer 8000`) 
     - Open a browser (e.g. `http://localhost:8000/test-page/`) and confirm the test page renderers.
-6. Delete the temporary template files including: `initChart.js`, `cleanup.js`,`package-template.json`, `./src/index-template.js`, `./text-file/index-template.html` and `instructions.js`.
+6. Run `node cleanup` to delete the temporary template files including: `initChart.js`, `cleanup.js`,`package-template.json`, `./src/index-template.js`, `./text-file/index-template.html` and `instructions.js`.
 7. (If using github) Commit the initialized template. 
     - `git add -A` 
     - `git commit -a -m 'initialize template for new project'`
