@@ -62,7 +62,6 @@ const question4 = () => {
                 cover: true    // cover file when exists, default is true
             }, function (err) {
                 if (err) throw err;
-                console.log('done');
             });
             resolve()
         })
