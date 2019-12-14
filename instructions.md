@@ -14,9 +14,9 @@ A template for making reusable customizations to webcharts charts
     - Update the function name in `/src/index.js`
     - Make a really basic `README.md` (overwriting these instructions)
     - Update the titles in `/test-page/index.html`
-4. Review `pacakge.json` and `readme.md` and make tweaks as needed. You can also re-run `node initCharts.js` if you want. 
+4. Review `package.json` and `readme.md` and make tweaks as needed. You can also re-run `node initCharts.js` if you want. 
 5. Test out the standard build process
-    - `npm run install`
+    - `npm install`
     - `npm run build`
     - Start a webserver (e.g. `python -m SimpleHTTPServer 8000`) 
     - Open a browser (e.g. `http://localhost:8000/test-page/`) and confirm the test page renderers.
