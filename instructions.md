@@ -19,7 +19,7 @@ A template for making reusable customizations to webcharts charts
 5. Review `pacakge.json` and `README.md` and make tweaks as needed. 
     - Note: You can also re-run `node init-template.js` to re-initialize or `node reset-template` to un-initiailze if you want. 
 6. Test out the standard build process
-    - `npm install`
+    - `npm run install`
     - `npm run build`
     - Start a webserver (e.g. `python -m SimpleHTTPServer 8000`) 
     - Open a browser (e.g. `http://localhost:8000/test-page/`) and confirm the test page renderers.
